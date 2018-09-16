@@ -2,13 +2,20 @@
   "name": "wtlog",
   "version": "1.0.0",
   "description": "What the Log is... another nodejs logger",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build"
   },
   "keywords": [
     "log",
     "logger"
+  ],
+  "files": [
+    "/dist",
+    "/src"
   ],
   "dependencies": {
     "chalk": "^2.4.1"
